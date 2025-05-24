@@ -1,0 +1,138 @@
+.transaction-list-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 200px;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: #333;
+}
+
+.filter-group select {
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.transaction-table-container {
+  overflow-x: auto;
+}
+
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transaction-table th,
+.transaction-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.transaction-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+}
+
+.transaction-table th:hover {
+  background-color: #e9ecef;
+}
+
+.transaction-table th.sorted-asc::after {
+  content: "▲";
+  margin-left: 5px;
+  font-size: 0.75rem;
+}
+
+.transaction-table th.sorted-desc::after {
+  content: "▼";
+  margin-left: 5px;
+  font-size: 0.75rem;
+}
+
+.transaction-table tr.income {
+  background-color: rgba(76, 175, 80, 0.05);
+}
+
+.transaction-table tr.expense {
+  background-color: rgba(244, 67, 54, 0.05);
+}
+
+.transaction-table tr:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.transaction-table td.amount {
+  font-weight: 600;
+}
+
+.transaction-table tr.income td.amount {
+  color: #4caf50;
+}
+
+.transaction-table tr.expense td.amount {
+  color: #f44336;
+}
+
+.transaction-table td.notes {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn.delete-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.875rem;
+  border-radius: 4px;
+}
+
+.btn.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+.empty-transactions {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .transaction-filters {
+    flex-direction: column;
+  }
+  
+  .transaction-table th,
+  .transaction-table td {
+    padding: 0.5rem;
+  }
+  
+  .transaction-table td.notes {
+    max-width: 100px;
+  }
+}
