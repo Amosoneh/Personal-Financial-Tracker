@@ -72,7 +72,7 @@ const TransactionForm: React.FC<TransactionFormProps> = ({ type, onSubmit, onCan
         <div className="form-group">
           <label htmlFor="amount">Amount*</label>
           <div className="input-with-prefix">
-            <span className="input-prefix">$</span>
+            <span className="input-prefix">#</span>
             <input
               type="number"
               id="amount"
