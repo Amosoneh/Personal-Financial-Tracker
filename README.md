@@ -28,7 +28,7 @@ A comprehensive web application for tracking personal finances, enabling users t
 
 1. Clone the repository or download the source code
 ```
-git clone https://github.com/amosoneh/personal-finance-tracker.git
+git clone https://github.com/Amosoneh/Personal-Financial-Tracker.git
 ```
 
 2. Navigate to the project directory
